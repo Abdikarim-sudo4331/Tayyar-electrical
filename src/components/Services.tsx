@@ -5,30 +5,30 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: Zap,
-      title: "Electrical Wiring",
-      description: "Complete electrical wiring solutions for new constructions and renovations. We ensure all wiring meets current electrical codes and safety standards.",
-      features: ["New Construction Wiring", "Rewiring Services", "Panel Upgrades", "Code Compliance"],
+      title: "Residential & Commercial",
+      description: "Comprehensive electrical installation services for residential apartments, commercial buildings, shopping malls, and hospitals & health facilities.",
+      features: ["Residential Apartments", "Commercial Buildings", "Shopping Malls", "Hospitals & Health Facilities"],
       color: "blue"
     },
     {
       icon: Wrench,
-      title: "Installation Services",
-      description: "Professional installation of electrical fixtures, outlets, switches, and appliances. Quality workmanship guaranteed on every project.",
-      features: ["Fixture Installation", "Outlet & Switch Installation", "Appliance Hookups", "Ceiling Fans"],
+      title: "Industrial & Infrastructure",
+      description: "Specialized electrical installations for data centers, factories, warehouses, and learning institutions with advanced power systems.",
+      features: ["Data Centers", "Factories", "Warehouses", "Learning Institutions"],
       color: "green"
     },
     {
       icon: Shield,
-      title: "Maintenance & Repair",
-      description: "Reliable maintenance and repair services to keep your electrical systems running safely and efficiently. 24/7 emergency service available.",
-      features: ["Preventive Maintenance", "Emergency Repairs", "Troubleshooting", "Safety Inspections"],
+      title: "Power Systems & Substations",
+      description: "High voltage and low voltage substation installations, airfield lighting systems, and power reticulation for estates, towns & cities.",
+      features: ["HV & LV Substations", "Airfield Lighting (AGL)", "Power Reticulations", "Estate Power Systems"],
       color: "orange"
     },
     {
       icon: Users,
-      title: "Consulting Services",
-      description: "Expert electrical consulting for apartment developers and property managers. We help plan and optimize electrical systems for maximum efficiency.",
-      features: ["System Design", "Load Calculations", "Code Consultation", "Project Planning"],
+      title: "Maintenance & Support",
+      description: "Fully-fledged maintenance department serving domestic and commercial needs with comprehensive support services.",
+      features: ["Preventive Maintenance", "Emergency Repairs", "Domestic Services", "Commercial Support"],
       color: "purple"
     }
   ];
@@ -119,29 +119,29 @@ const Services: React.FC = () => {
         {/* Specialization Section */}
         <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-6">
-            Specializing in <span className="text-blue-600">Apartment Development</span>
+            Learn About <span className="text-blue-600">Our Services</span>
           </h3>
           <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            We work closely with apartment developers to provide comprehensive electrical solutions 
-            that meet building codes, optimize energy efficiency, and ensure tenant satisfaction.
+            From residential apartments to large-scale industrial projects, we provide comprehensive 
+            electrical solutions tailored to meet diverse client needs across Kenya.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               { 
                 icon: Building, 
-                title: "Multi-Unit Wiring", 
-                desc: "Efficient electrical systems for apartment complexes"
+                title: "Diverse Projects", 
+                desc: "Projects varying in magnitude, type and complexity"
               },
               { 
                 icon: Home, 
-                title: "Smart Home Ready", 
-                desc: "Future-proof wiring for modern amenities"
+                title: "Public & Private", 
+                desc: "Serving both private and public sector clients"
               },
               { 
                 icon: Lightbulb, 
-                title: "Energy Efficient", 
-                desc: "LED lighting and energy-saving solutions"
+                title: "Complete Solutions", 
+                desc: "From installation to maintenance services"
               }
             ].map((item, index) => (
               <div key={index} className="text-center">

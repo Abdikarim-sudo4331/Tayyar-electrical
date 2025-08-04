@@ -44,16 +44,17 @@ const About: React.FC = () => {
             </h2>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              With over 15 years of experience in the electrical industry, Tayyar Electricals 
-              has become a trusted partner for apartment developers and property managers 
-              throughout the region.
+              Tayyar Electricals Limited (TEL) is a registered Electrical Engineering company 
+              based in Nairobi, Kenya. TEL has been involved in many projects varying in 
+              magnitude, type and complexity.
             </p>
 
             <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-              We specialize in comprehensive electrical solutions for multi-unit residential 
-              buildings, from initial wiring and installation to ongoing maintenance and 
-              emergency repairs. Our team of licensed electricians is committed to delivering 
-              safe, reliable, and code-compliant electrical systems.
+              We have gained experience and confidence over the years through thorough handling 
+              and successful completion of all our projects, both in the private and public sectors. 
+              Our operations have covered construction and installation works for diverse industrial 
+              concerns as well as multistory commercial buildings and residential complexes. In addition, 
+              we have a fully-fledged maintenance department serving domestic and commercial needs.
             </p>
 
             <div className="space-y-4 mb-10">
@@ -64,6 +65,12 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
+
+            <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+              We believe that the ensuing benefits of our enhanced efficiency shall be reflected 
+              by quicker and more accurate response to inquiries and lower costs due to optimum 
+              material and time utilization. All of which we tailor to our esteemed clients.
+            </p>
 
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
