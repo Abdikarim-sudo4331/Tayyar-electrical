@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
           {/* Image Slider */}
           <div className="mb-16 max-w-4xl mx-auto">
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <div className="flex transition-transform duration-500 ease-in-out">
+              <div className="flex transition-transform duration-500 ease-in-out" id="slider">
                 <div className="w-full flex-shrink-0">
                   <img 
                     src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1200" 
@@ -155,11 +155,61 @@ const Hero: React.FC = () => {
                     <p className="text-white/90">Complete electrical systems for apartment complexes</p>
                   </div>
                 </div>
+                <div className="w-full flex-shrink-0">
+                  <img 
+                    src="/Engineers designs.jpg" 
+                    alt="Engineering designs and electrical planning"
+                    className="w-full h-80 md:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Engineering & Design</h3>
+                    <p className="text-white/90">Expert electrical system design and planning</p>
+                  </div>
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <img 
+                    src="/Engineers 11.jpg" 
+                    alt="Professional engineers at work"
+                    className="w-full h-80 md:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Expert Team</h3>
+                    <p className="text-white/90">Experienced engineers and technicians</p>
+                  </div>
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <img 
+                    src="/Chint 1.jpg" 
+                    alt="Quality electrical components and equipment"
+                    className="w-full h-80 md:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Quality Components</h3>
+                    <p className="text-white/90">Premium electrical equipment and materials</p>
+                  </div>
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <img 
+                    src="/Chint catalogue.jpg" 
+                    alt="Comprehensive product catalogue"
+                    className="w-full h-80 md:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Product Range</h3>
+                    <p className="text-white/90">Extensive catalogue of electrical solutions</p>
+                  </div>
+                </div>
               </div>
               
               {/* Slider Indicators */}
               <div className="absolute bottom-4 right-6 flex space-x-2">
                 <div className="w-2 h-2 bg-white rounded-full opacity-100"></div>
+                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
                 <div className="w-2 h-2 bg-white/50 rounded-full"></div>
                 <div className="w-2 h-2 bg-white/50 rounded-full"></div>
               </div>
