@@ -21,6 +21,16 @@ const Hero: React.FC = () => {
       description: "Experienced engineers and technicians"
     },
     {
+      image: "/Engineers.jpg",
+      title: "Professional Engineers",
+      description: "Skilled electrical engineers at work"
+    },
+    {
+      image: "/Engineers designs - Copy.jpg",
+      title: "Technical Drawings",
+      description: "Detailed electrical system blueprints"
+    },
+    {
       image: "/Chint 1.jpg",
       title: "Quality Components",
       description: "Premium electrical equipment and materials"
