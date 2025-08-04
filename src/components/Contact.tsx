@@ -76,8 +76,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-1">Service Area</h4>
-                    <p className="text-purple-600 font-medium">Metro Area</p>
-                    <p className="text-sm text-gray-600">50-mile radius coverage</p>
+                    <p className="text-purple-600 font-medium">Al Falaq Building S1 3rd Street</p>
+                    <p className="text-sm text-gray-600">Eastleigh Nairobi Kenya</p>
                   </div>
                 </div>
 
