@@ -70,6 +70,7 @@ const Footer: React.FC = () => {
                 { label: "About", id: "about" },
                 { label: "Services", id: "services" },
                 { label: "Projects", id: "projects" },
+                { label: "Partners", id: "partners" },
                 { label: "Contact", id: "contact" }
               ].map((link, index) => (
                 <li key={index}>

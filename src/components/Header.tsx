@@ -47,7 +47,7 @@ const Header: React.FC = () => {
               { name: 'About', id: 'about' },
               { name: 'Services', id: 'services' },
               { name: 'Projects', id: 'projects' },
-              { name: 'Blog', id: 'blog' }
+              { name: 'Partners', id: 'partners' }
             ].map((item) => (
               <button
                 key={item.name}
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                 { name: 'About', id: 'about' },
                 { name: 'Services', id: 'services' },
                 { name: 'Projects', id: 'projects' },
-                { name: 'Blog', id: 'blog' }
+                { name: 'Partners', id: 'partners' }
               ].map((item) => (
                 <button
                   key={item.name}
