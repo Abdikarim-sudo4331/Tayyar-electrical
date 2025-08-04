@@ -151,7 +151,7 @@ const About: React.FC = () => {
               Get Free Quote
             </button>
             <button className="bg-white border-2 border-gray-200 text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:border-gray-300 hover:shadow-md transition-all duration-200 hover:-translate-y-1">
-              Call (555) 123-4567
+              Call +254 768 817662
             </button>
           </div>
         </div>
