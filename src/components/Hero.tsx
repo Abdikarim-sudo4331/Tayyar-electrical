@@ -1,7 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Zap, Shield, Award } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const slides = [
+    {
+      image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      title: "Professional Wiring Installation",
+      description: "Complete electrical systems for apartment complexes"
+    },
+    {
+      image: "/Engineers designs.jpg",
+      title: "Engineering & Design",
+      description: "Expert electrical system design and planning"
+    },
+    {
+      image: "/Engineers 11.jpg",
+      title: "Expert Team",
+      description: "Experienced engineers and technicians"
+    },
+    {
+      image: "/Chint 1.jpg",
+      title: "Quality Components",
+      description: "Premium electrical equipment and materials"
+    },
+    {
+      image: "/Chint catalogue.jpg",
+      title: "Product Range",
+      description: "Extensive catalogue of electrical solutions"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -142,77 +180,56 @@ const Hero: React.FC = () => {
           {/* Image Slider */}
           <div className="mb-16 max-w-4xl mx-auto">
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <div className="flex transition-transform duration-500 ease-in-out" id="slider">
-                <div className="w-full flex-shrink-0">
-                  <img 
-                    src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Professional electrical wiring installation"
-                    className="w-full h-80 md:h-96 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Professional Wiring Installation</h3>
-                    <p className="text-white/90">Complete electrical systems for apartment complexes</p>
+              <div 
+                className="flex transition-transform duration-500 ease-in-out" 
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {slides.map((slide, index) => (
+                  <div key={index} className="w-full flex-shrink-0 relative">
+                    <img 
+                      src={slide.image} 
+                      alt={slide.title}
+                      className="w-full h-80 md:h-96 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <h3 className="text-2xl font-bold mb-2">{slide.title}</h3>
+                      <p className="text-white/90">{slide.description}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="w-full flex-shrink-0">
-                  <img 
-                    src="/Engineers designs.jpg" 
-                    alt="Engineering designs and electrical planning"
-                    className="w-full h-80 md:h-96 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Engineering & Design</h3>
-                    <p className="text-white/90">Expert electrical system design and planning</p>
-                  </div>
-                </div>
-                <div className="w-full flex-shrink-0">
-                  <img 
-                    src="/Engineers 11.jpg" 
-                    alt="Professional engineers at work"
-                    className="w-full h-80 md:h-96 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Expert Team</h3>
-                    <p className="text-white/90">Experienced engineers and technicians</p>
-                  </div>
-                </div>
-                <div className="w-full flex-shrink-0">
-                  <img 
-                    src="/Chint 1.jpg" 
-                    alt="Quality electrical components and equipment"
-                    className="w-full h-80 md:h-96 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Quality Components</h3>
-                    <p className="text-white/90">Premium electrical equipment and materials</p>
-                  </div>
-                </div>
-                <div className="w-full flex-shrink-0">
-                  <img 
-                    src="/Chint catalogue.jpg" 
-                    alt="Comprehensive product catalogue"
-                    className="w-full h-80 md:h-96 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Product Range</h3>
-                    <p className="text-white/90">Extensive catalogue of electrical solutions</p>
-                  </div>
-                </div>
+                ))}
               </div>
               
               {/* Slider Indicators */}
               <div className="absolute bottom-4 right-6 flex space-x-2">
-                <div className="w-2 h-2 bg-white rounded-full opacity-100"></div>
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-opacity duration-200 ${
+                      index === currentSlide ? 'bg-white opacity-100' : 'bg-white/50'
+                    }`}
+                  />
+                ))}
               </div>
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
