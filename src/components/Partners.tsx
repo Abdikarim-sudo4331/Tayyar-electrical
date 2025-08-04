@@ -4,11 +4,6 @@ import { Handshake, Award, Globe, Users } from 'lucide-react';
 const Partners: React.FC = () => {
   const partners = [
     {
-      name: "Chint Electric",
-      logo: "/Partners chint.jpg",
-      description: "Leading electrical equipment manufacturer"
-    },
-    {
       name: "Partner Network",
       logo: "/partners.PNG", 
       description: "Our trusted partner ecosystem"
@@ -53,7 +48,7 @@ const Partners: React.FC = () => {
 
         {/* Partner Logos */}
         <div className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="flex justify-center max-w-2xl mx-auto">
             {partners.map((partner, index) => (
               <div 
                 key={index}
